@@ -1,0 +1,830 @@
+[2025-11-06 14:11:26] Detected anomalies for 'cpu_allocation_efficiency' at indices [np.int64(70), np.int64(96), np.int64(99), np.int64(177), np.int64(193), np.int64(215), np.int64(234), np.int64(256), np.int64(373), np.int64(423)] (total=10)
+[2025-11-06 14:11:26] ALERT: cpu_allocation_efficiency anomalies detected. Manual inspection recommended.
+[2025-11-06 14:11:26] Detected anomalies for 'memory_allocation_efficiency' at indices [np.int64(39), np.int64(44), np.int64(45), np.int64(55), np.int64(137), np.int64(147), np.int64(278), np.int64(333), np.int64(339), np.int64(425)] (total=10)
+[2025-11-06 14:11:26] ALERT: memory_allocation_efficiency anomalies detected. Manual inspection recommended.
+[2025-11-06 14:11:26] Detected anomalies for 'disk_io' at indices [np.int64(18), np.int64(71), np.int64(261), np.int64(263), np.int64(320), np.int64(329), np.int64(368), np.int64(373), np.int64(380), np.int64(411)] (total=10)
+[2025-11-06 14:11:26] ALERT: disk_io anomalies detected. Manual inspection recommended.
+[2025-11-06 14:11:26] Detected anomalies for 'network_latency' at indices [np.int64(5), np.int64(55), np.int64(85), np.int64(108), np.int64(190), np.int64(277), np.int64(282), np.int64(313), np.int64(319), np.int64(359)] (total=10)
+[2025-11-06 14:11:26] ALERT: network_latency anomalies detected. Manual inspection recommended.
+[2025-11-06 14:11:26] Detected anomalies for 'node_cpu_usage' at indices [np.int64(5), np.int64(6), np.int64(18), np.int64(102), np.int64(138), np.int64(201), np.int64(228), np.int64(330), np.int64(358), np.int64(403)] (total=10)
+[2025-11-06 14:11:26] Action: scale default/my-deployment from 1 -> 2
+[2025-11-06 14:11:26] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-11-06 14:11:26] Scale command accepted: dry-run
+[2025-11-06 14:11:26] Detected anomalies for 'node_memory_usage' at indices [np.int64(25), np.int64(40), np.int64(42), np.int64(57), np.int64(143), np.int64(154), np.int64(272), np.int64(318), np.int64(432), np.int64(446)] (total=10)
+[2025-11-06 14:11:26] No pod found to restart; notify human.
+[2025-11-06 14:11:26] Detected anomalies for 'node_temperature' at indices [np.int64(0), np.int64(8), np.int64(24), np.int64(49), np.int64(73), np.int64(123), np.int64(127), np.int64(298), np.int64(465), np.int64(468)] (total=10)
+[2025-11-06 14:11:26] No node specified to cordon; please configure node_name in REMEDIATION_PLAN.
+[2025-11-06 14:11:29] Script run complete.
+[2025-12-01 15:39:24] [2025-12-01 15:39:23] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:39:24] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:39:24] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:39:24] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:39:24] Scale command accepted: dry-run
+[2025-12-01 15:39:54] [2025-12-01 15:39:54] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:39:54] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:39:54] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:39:54] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:39:54] Scale command accepted: dry-run
+[2025-12-01 15:40:24] [2025-12-01 15:40:24] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:40:24] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:40:24] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:40:24] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:40:24] Scale command accepted: dry-run
+[2025-12-01 15:40:54] [2025-12-01 15:40:54] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:40:54] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:40:55] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:40:55] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:40:55] Scale command accepted: dry-run
+[2025-12-01 15:41:25] [2025-12-01 15:41:25] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:41:25] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:41:25] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:41:25] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:41:25] Scale command accepted: dry-run
+[2025-12-01 15:41:55] [2025-12-01 15:41:55] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:41:55] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:41:55] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:41:55] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:41:55] Scale command accepted: dry-run
+[2025-12-01 15:42:25] [2025-12-01 15:42:25] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:42:25] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:42:25] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:42:25] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:42:25] Scale command accepted: dry-run
+[2025-12-01 15:42:55] [2025-12-01 15:42:55] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:42:55] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:42:55] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:42:55] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:42:55] Scale command accepted: dry-run
+[2025-12-01 15:43:26] [2025-12-01 15:43:25] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:43:26] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:43:26] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:43:26] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:43:26] Scale command accepted: dry-run
+[2025-12-01 15:43:56] [2025-12-01 15:43:56] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:43:56] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:43:56] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:43:56] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:43:56] Scale command accepted: dry-run
+[2025-12-01 15:44:26] [2025-12-01 15:44:26] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:44:26] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:44:26] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:44:26] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:44:26] Scale command accepted: dry-run
+[2025-12-01 15:44:56] [2025-12-01 15:44:56] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:44:56] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:44:56] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:44:56] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:44:56] Scale command accepted: dry-run
+[2025-12-01 15:45:26] [2025-12-01 15:45:26] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:45:26] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:45:26] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:45:26] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:45:26] Scale command accepted: dry-run
+[2025-12-01 15:45:57] [2025-12-01 15:45:56] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:45:57] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:45:57] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:45:57] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:45:57] Scale command accepted: dry-run
+[2025-12-01 15:46:27] [2025-12-01 15:46:27] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:46:27] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:46:27] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:46:27] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:46:27] Scale command accepted: dry-run
+[2025-12-01 15:46:57] [2025-12-01 15:46:57] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:46:57] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:46:57] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:46:57] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:46:57] Scale command accepted: dry-run
+[2025-12-01 15:47:27] [2025-12-01 15:47:27] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:47:27] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:47:27] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:47:27] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:47:27] Scale command accepted: dry-run
+[2025-12-01 15:47:57] [2025-12-01 15:47:57] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:47:57] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:47:57] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:47:57] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:47:57] Scale command accepted: dry-run
+[2025-12-01 15:48:28] [2025-12-01 15:48:27] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:48:28] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:48:28] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:48:28] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:48:28] Scale command accepted: dry-run
+[2025-12-01 15:48:58] [2025-12-01 15:48:58] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:48:58] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:48:58] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:48:58] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:48:58] Scale command accepted: dry-run
+[2025-12-01 15:49:28] [2025-12-01 15:49:28] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:49:28] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:49:28] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:49:28] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:49:28] Scale command accepted: dry-run
+[2025-12-01 15:49:58] [2025-12-01 15:49:58] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:49:58] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:49:58] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:49:58] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:49:58] Scale command accepted: dry-run
+[2025-12-01 15:50:28] [2025-12-01 15:50:28] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:50:28] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:50:28] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:50:28] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:50:28] Scale command accepted: dry-run
+[2025-12-01 15:50:59] [2025-12-01 15:50:58] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:50:59] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:50:59] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:50:59] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:50:59] Scale command accepted: dry-run
+[2025-12-01 15:51:29] [2025-12-01 15:51:29] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:51:29] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:51:29] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:51:29] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:51:29] Scale command accepted: dry-run
+[2025-12-01 15:51:59] [2025-12-01 15:51:59] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:51:59] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:51:59] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:51:59] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:51:59] Scale command accepted: dry-run
+[2025-12-01 15:52:29] [2025-12-01 15:52:29] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:52:29] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:52:29] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:52:29] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:52:29] Scale command accepted: dry-run
+[2025-12-01 15:52:59] [2025-12-01 15:52:59] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:52:59] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:52:59] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:52:59] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:52:59] Scale command accepted: dry-run
+[2025-12-01 15:53:30] [2025-12-01 15:53:29] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:53:30] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:53:30] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:53:30] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:53:30] Scale command accepted: dry-run
+[2025-12-01 15:54:00] [2025-12-01 15:54:00] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:54:00] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:54:00] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:54:00] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:54:00] Scale command accepted: dry-run
+[2025-12-01 15:54:30] [2025-12-01 15:54:30] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:54:30] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:54:30] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:54:30] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:54:30] Scale command accepted: dry-run
+[2025-12-01 15:55:00] [2025-12-01 15:55:00] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:55:00] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:55:00] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:55:00] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:55:00] Scale command accepted: dry-run
+[2025-12-01 15:55:30] [2025-12-01 15:55:30] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:55:30] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:55:30] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:55:30] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:55:30] Scale command accepted: dry-run
+[2025-12-01 15:56:01] [2025-12-01 15:56:00] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:56:01] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:56:01] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:56:01] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:56:01] Scale command accepted: dry-run
+[2025-12-01 15:56:31] [2025-12-01 15:56:31] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:56:31] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:56:31] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:56:31] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:56:31] Scale command accepted: dry-run
+[2025-12-01 15:57:01] [2025-12-01 15:57:01] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:57:01] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:57:01] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:57:01] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:57:01] Scale command accepted: dry-run
+[2025-12-01 15:57:31] [2025-12-01 15:57:31] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:57:31] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:57:31] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:57:31] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:57:31] Scale command accepted: dry-run
+[2025-12-01 15:58:01] [2025-12-01 15:58:01] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:58:01] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:58:01] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:58:01] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:58:01] Scale command accepted: dry-run
+[2025-12-01 15:58:32] [2025-12-01 15:58:32] RISK for pod nginx-5869d7778c-zqqgc: future CPU (mcores)=[62.099998474121094, 70.19999694824219, 65.69999694824219, 68.5999984741211, 56.0], future MEM (bytes)=[64, 66, 41, 67, 65]
+[2025-12-01 15:58:32] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 15:58:32] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 15:58:32] [DRY-RUN] Would run: kubectl scale deployment my-deployment -n default --replicas=2
+[2025-12-01 15:58:32] Scale command accepted: dry-run
+[2025-12-01 16:16:47] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:16:47] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:16:47] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:17:17] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:17:17] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:17:18] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:17:48] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:17:48] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:17:48] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:18:18] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:18:18] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:18:18] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:18:49] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:18:49] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:18:49] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:19:19] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:19:19] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:19:19] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:19:49] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:19:50] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:19:50] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:20:20] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:20:20] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:20:20] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:20:50] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:20:50] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:20:50] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:21:21] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:21:21] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:21:21] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:21:51] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:21:51] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:21:51] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:22:21] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:22:21] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:22:22] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:22:52] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:22:52] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:22:52] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:23:22] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:23:22] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:23:22] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:23:53] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:23:53] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:23:53] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:24:23] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:24:23] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:24:23] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:24:53] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:24:53] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:24:54] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:25:24] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:25:24] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:25:24] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:25:54] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:25:54] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:25:54] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:26:24] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:26:25] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:26:25] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:26:55] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:26:55] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:26:55] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:27:25] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:27:25] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:27:26] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:27:56] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:27:56] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:27:56] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:28:26] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:28:26] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:28:26] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:28:57] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:28:57] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:28:57] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:29:27] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:29:27] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:29:27] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:29:57] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:29:57] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:29:58] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:30:28] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:30:28] Action: scale default/my-deployment from 1 -> 2
+[2025-12-01 16:30:28] Scale failed: Command '['kubectl', 'scale', 'deployment', 'my-deployment', '-n', 'default', '--replicas=2']' returned non-zero exit status 1.
+[2025-12-01 16:45:20] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:45:20] Action: scale default/nginx from 1 -> 2
+[2025-12-01 16:45:20] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:45:51] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:45:51] Action: scale default/nginx from 2 -> 3
+[2025-12-01 16:45:51] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:46:21] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:46:21] Action: scale default/nginx from 3 -> 4
+[2025-12-01 16:46:21] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:46:52] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:46:52] Action: scale default/nginx from 4 -> 5
+[2025-12-01 16:46:52] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:47:22] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:47:22] Action: scale default/nginx from 5 -> 6
+[2025-12-01 16:47:22] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:47:52] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:47:52] Action: scale default/nginx from 6 -> 7
+[2025-12-01 16:47:53] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:48:23] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:48:23] Action: scale default/nginx from 7 -> 8
+[2025-12-01 16:48:23] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 16:48:53] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 16:48:53] Action: scale default/nginx from 8 -> 9
+[2025-12-01 16:48:54] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 17:06:17] Starting Prometheus-backed monitor for default/nginx (interval=60s, horizon=5m)
+[2025-12-01 19:44:49] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 19:44:50] Action: scale default/nginx from 1 -> 2
+[2025-12-01 19:44:50] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 19:45:50] default/nginx: RISK detected but within cooldown window; estimated replicas=112, skipping scale this cycle.
+[2025-12-01 19:46:50] default/nginx: RISK detected but within cooldown window; estimated replicas=112, skipping scale this cycle.
+[2025-12-01 19:47:51] default/nginx: RISK detected but within cooldown window; estimated replicas=116, skipping scale this cycle.
+[2025-12-01 19:48:51] default/nginx: RISK detected but within cooldown window; estimated replicas=120, skipping scale this cycle.
+[2025-12-01 19:49:51] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-01 19:49:51] Action: scale default/nginx from 2 -> 3
+[2025-12-01 19:49:51] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-01 19:50:52] default/nginx: RISK detected but within cooldown window; estimated replicas=126, skipping scale this cycle.
+[2025-12-01 19:51:52] default/nginx: RISK detected but within cooldown window; estimated replicas=130, skipping scale this cycle.
+[2025-12-01 19:52:52] default/nginx: RISK detected but within cooldown window; estimated replicas=135, skipping scale this cycle.
+[2025-12-01 19:53:52] default/nginx: RISK detected but within cooldown window; estimated replicas=139, skipping scale this cycle.
+[2025-12-04 18:33:17] Starting Prometheus-backed monitor for default/nginx (interval=60s, horizon=5m)
+[2025-12-04 18:47:05] Starting Prometheus-backed monitor for default/nginx (interval=60s, horizon=5m)
+[2025-12-04 19:15:11] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-04 19:15:11] Action: scale default/nginx from 1 -> 2
+[2025-12-04 19:15:11] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-04 19:16:12] default/nginx: RISK detected but within cooldown window; estimated replicas=102, skipping scale this cycle.
+[2025-12-04 19:17:12] default/nginx: RISK detected but within cooldown window; estimated replicas=102, skipping scale this cycle.
+[2025-12-04 19:18:12] default/nginx: RISK detected but within cooldown window; estimated replicas=103, skipping scale this cycle.
+[2025-12-04 19:19:12] default/nginx: RISK detected but within cooldown window; estimated replicas=104, skipping scale this cycle.
+[2025-12-04 19:20:13] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-04 19:20:13] Action: scale default/nginx from 2 -> 3
+[2025-12-04 19:20:13] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-04 19:21:13] default/nginx: RISK detected but within cooldown window; estimated replicas=106, skipping scale this cycle.
+[2025-12-04 19:22:13] default/nginx: RISK detected but within cooldown window; estimated replicas=107, skipping scale this cycle.
+[2025-12-04 19:36:52] Starting Prometheus-backed monitor for default/nginx (interval=60s, horizon=5m)
+[2025-12-04 19:47:29] Starting Prometheus-backed monitor for default/nginx (interval=60s, horizon=5m)
+[2025-12-04 22:03:19] Monitor interrupted by user. Exiting gracefully.
+[2025-12-04 22:14:13] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-04 22:43:16] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-04 23:17:21] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-04 23:17:21] Action: scale default/nginx from 1 -> 2
+[2025-12-04 23:17:21] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-04 23:18:26] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-04 23:19:31] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-04 23:24:54] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-04 23:24:54] Action: scale default/nginx from 2 -> 3
+[2025-12-04 23:24:54] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-04 23:25:59] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-04 23:27:04] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-04 23:29:53] Monitor interrupted by user. Exiting gracefully.
+[2025-12-04 23:30:25] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 00:14:17] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 00:14:17] Action: scale default/nginx from 1 -> 2
+[2025-12-05 00:14:17] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 00:15:21] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-05 00:23:58] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 00:23:59] Action: scale default/nginx from 1 -> 2
+[2025-12-05 00:23:59] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 00:25:03] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-05 00:31:50] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 00:34:20] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 00:58:16] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 00:59:08] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 01:30:10] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 01:32:30] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 01:41:33] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 02:08:01] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 02:14:19] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 02:15:10] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 02:15:33] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 02:22:24] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 02:22:24] Action: scale default/nginx from 1 -> 2
+[2025-12-05 02:22:24] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 02:23:29] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-05 02:24:33] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-05 02:25:38] default/nginx: CPU risk detected but in cooldown; skipping scale.
+[2025-12-05 02:29:19] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 02:30:01] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 02:33:25] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 14:36:28] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 15:09:19] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 15:15:13] Starting Prometheus monitor (Mode A) for default/nginx
+[2025-12-05 15:48:05] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 15:49:32] Starting Prometheus monitor (Mode A) for default/nginx [container=nginx]
+[2025-12-05 16:00:26] Monitor interrupted by user. Exiting gracefully.
+[2025-12-05 16:12:34] Starting Prometheus monitor for default/nginx
+[2025-12-05 16:17:58] Hourly retraining complete.
+[2025-12-05 16:23:02] Hourly retraining complete.
+[2025-12-05 16:28:07] Hourly retraining complete.
+[2025-12-05 16:28:28] Monitor interrupted by user. Exiting.
+[2025-12-05 16:29:10] Starting Prometheus monitor for default/nginx
+[2025-12-05 16:34:36] Hourly retraining complete.
+[2025-12-05 16:39:41] Hourly retraining complete.
+[2025-12-05 16:40:46] Monitor interrupted by user. Exiting.
+[2025-12-05 16:41:38] Starting Prometheus monitor for default/nginx
+[2025-12-05 16:43:18] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 16:43:18] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 16:43:18] Action: scale default/nginx from 1 -> 2
+[2025-12-05 16:43:18] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 16:44:19] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:45:19] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:46:19] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:47:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:48:20] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 16:48:20] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 16:48:20] Action: scale default/nginx from 2 -> 3
+[2025-12-05 16:48:20] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 16:48:23] Hourly retraining complete.
+[2025-12-05 16:49:23] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:50:23] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:51:24] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:52:24] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:53:24] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 16:53:24] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 16:53:24] Action: scale default/nginx from 3 -> 4
+[2025-12-05 16:53:25] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 16:53:27] Hourly retraining complete.
+[2025-12-05 16:54:27] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:55:28] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 16:55:58] Monitor interrupted by user. Exiting.
+[2025-12-05 16:58:56] Starting Prometheus monitor for default/nginx
+[2025-12-05 17:05:40] Hourly retraining complete.
+[2025-12-05 17:07:40] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:07:40] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 17:07:40] Action: scale default/nginx from 1 -> 2
+[2025-12-05 17:07:41] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 17:08:41] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:09:41] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:10:42] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:10:44] Hourly retraining complete.
+[2025-12-05 17:11:45] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:15:46] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:15:46] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 17:15:46] Action: scale default/nginx from 2 -> 3
+[2025-12-05 17:15:47] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 17:15:49] Hourly retraining complete.
+[2025-12-05 17:16:49] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:17:50] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:18:34] Monitor interrupted by user. Exiting.
+[2025-12-05 17:19:27] Starting Prometheus monitor for default/nginx
+[2025-12-05 17:21:06] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:21:06] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 17:21:06] Action: scale default/nginx from 3 -> 4
+[2025-12-05 17:21:07] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 17:22:07] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:23:07] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:24:07] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:25:45] Monitor interrupted by user. Exiting.
+[2025-12-05 17:26:40] Starting Prometheus monitor for default/nginx
+[2025-12-05 17:28:20] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:29:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:30:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:31:21] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:32:21] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:33:21] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:33:24] Hourly retraining complete.
+[2025-12-05 17:33:40] Monitor interrupted by user. Exiting.
+[2025-12-05 17:34:25] Starting Prometheus monitor for default/nginx
+[2025-12-05 17:38:05] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:39:05] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:40:05] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:41:06] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:41:09] Hourly retraining complete.
+[2025-12-05 17:44:07] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:45:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:46:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:47:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:47:11] Hourly retraining complete.
+[2025-12-05 17:48:11] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:49:12] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:50:12] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:51:13] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:52:13] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:52:16] Hourly retraining complete.
+[2025-12-05 17:52:43] Monitor interrupted by user. Exiting.
+[2025-12-05 17:53:40] Starting Prometheus monitor for default/nginx
+[2025-12-05 17:55:19] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 17:57:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:58:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 17:59:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:00:21] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:00:24] Hourly retraining complete.
+[2025-12-05 18:01:24] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:02:25] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:03:25] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:04:25] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:05:25] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:05:29] Hourly retraining complete.
+[2025-12-05 18:06:29] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:07:30] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:08:24] Monitor interrupted by user. Exiting.
+[2025-12-05 18:18:28] Starting Prometheus monitor for default/nginx
+[2025-12-05 18:20:07] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:21:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:22:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:23:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:24:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:25:09] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:25:12] Hourly retraining complete.
+[2025-12-05 18:26:12] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:27:12] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:28:13] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:29:13] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:30:16] Hourly retraining complete.
+[2025-12-05 18:31:16] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:32:16] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:33:17] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:34:17] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:35:17] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:35:21] Hourly retraining complete.
+[2025-12-05 18:36:21] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:37:21] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:40:23] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:40:25] Hourly retraining complete.
+[2025-12-05 18:42:26] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:43:27] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:44:27] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:45:28] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:45:31] Hourly retraining complete.
+[2025-12-05 18:46:32] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:47:32] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 18:48:33] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:49:33] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:50:34] default/nginx: CPU stress detected but in cooldown.
+[2025-12-05 18:50:35] Hourly retraining complete.
+[2025-12-05 18:51:29] Monitor interrupted by user. Exiting.
+[2025-12-05 19:00:35] Starting Prometheus monitor for default/nginx
+[2025-12-05 19:13:07] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 19:13:07] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 19:13:07] Action: scale default/nginx from 1 -> 2
+[2025-12-05 19:13:07] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 19:18:09] Hourly retraining complete.
+[2025-12-05 19:23:11] Hourly retraining complete.
+[2025-12-05 19:27:13] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-05 19:27:13] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-05 19:27:13] Action: scale default/nginx from 2 -> 3
+[2025-12-05 19:27:14] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-05 19:27:32] Monitor interrupted by user. Exiting.
+[2025-12-25 22:56:27] Starting Prometheus monitor for default/nginx
+[2025-12-25 23:10:18] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-25 23:10:18] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-25 23:10:18] Action: scale default/nginx from 1 -> 2
+[2025-12-25 23:10:18] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-25 23:11:55] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:13:32] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:15:09] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:15:31] Monitor interrupted by user. Exiting.
+[2025-12-25 23:15:51] Starting Prometheus monitor for default/nginx
+[2025-12-25 23:29:42] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-25 23:29:42] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-25 23:29:42] Action: scale default/nginx from 1 -> 2
+[2025-12-25 23:29:43] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-25 23:31:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:32:56] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:34:33] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:36:10] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-25 23:36:10] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-25 23:36:10] Action: scale default/nginx from 2 -> 3
+[2025-12-25 23:36:10] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-25 23:37:47] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:39:24] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:41:01] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:42:38] default/nginx: CPU stress detected. Triggering remediation.
+[2025-12-25 23:42:38] Detected anomalies for 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-25 23:42:38] Action: scale default/nginx from 3 -> 4
+[2025-12-25 23:42:38] Scale command accepted: deployment.apps/nginx scaled
+
+[2025-12-25 23:42:39] Hourly retraining complete.
+[2025-12-25 23:44:16] default/nginx: CPU stress detected but in cooldown.
+[2025-12-25 23:45:13] Monitor interrupted by user. Exiting.
+[2025-12-25 23:51:36] Starting Prometheus monitor for default/nginx
+[2025-12-25 23:55:04] Monitor interrupted by user. Exiting.
+[2025-12-25 23:55:22] Starting Prometheus monitor for default/nginx
+[2025-12-26 00:20:23] Starting Prometheus monitor for default/nginx
+[2025-12-26 00:29:21] Model not available; collecting more history for retraining.
+[2025-12-26 00:30:16] Model not available; collecting more history for retraining.
+[2025-12-26 00:31:11] Model not available; collecting more history for retraining.
+[2025-12-26 00:32:06] Model not available; collecting more history for retraining.
+[2025-12-26 00:33:01] Model not available; collecting more history for retraining.
+[2025-12-26 00:33:58] Retraining complete: new model and scaler saved.
+[2025-12-26 00:34:00] Retraining complete: new model and scaler saved.
+[2025-12-26 00:39:35] Retraining complete: new model and scaler saved.
+[2025-12-26 00:45:11] Retraining complete: new model and scaler saved.
+[2025-12-26 00:50:47] Retraining complete: new model and scaler saved.
+[2025-12-26 00:56:22] Retraining complete: new model and scaler saved.
+[2025-12-26 01:01:29] Retraining complete: new model and scaler saved.
+[2025-12-26 01:05:28] default/nginx: Pod CPU efficiency stress detected. Triggering remediation.
+[2025-12-26 01:05:28] Detected anomalies for 'cpu_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 01:05:28] ALERT: cpu_allocation_efficiency anomalies detected. Manual inspection recommended.
+[2025-12-26 01:05:39] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:05:49] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:05:59] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:06:10] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:06:20] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:06:30] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:06:34] Retraining complete: new model and scaler saved.
+[2025-12-26 01:06:45] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:06:56] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:07:06] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:07:16] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:07:27] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:07:37] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:07:48] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:07:58] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:08:08] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:08:19] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:08:29] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:08:39] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:08:50] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:09:00] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:09:10] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:09:21] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:09:31] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:09:41] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:09:52] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:10:02] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:10:12] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:10:23] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:10:33] default/nginx: Pod CPU efficiency stress detected. Triggering remediation.
+[2025-12-26 01:10:33] Detected anomalies for 'cpu_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 01:10:33] ALERT: cpu_allocation_efficiency anomalies detected. Manual inspection recommended.
+[2025-12-26 01:10:43] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:10:54] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:11:04] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:11:15] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:11:25] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:11:35] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:11:39] Retraining complete: new model and scaler saved.
+[2025-12-26 01:11:50] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:12:01] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:12:11] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:12:21] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:12:32] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:12:42] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:12:52] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:13:03] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:13:13] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:13:23] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:13:34] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:13:44] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:13:54] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:14:05] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:14:15] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:14:25] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:14:36] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:14:46] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:14:56] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:15:07] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:15:17] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:15:27] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:15:38] default/nginx: Pod CPU efficiency stress detected. Triggering remediation.
+[2025-12-26 01:15:38] Detected anomalies for 'cpu_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 01:15:38] ALERT: cpu_allocation_efficiency anomalies detected. Manual inspection recommended.
+[2025-12-26 01:15:48] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:15:58] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:16:09] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:16:19] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:16:29] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:16:40] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:16:45] Retraining complete: new model and scaler saved.
+[2025-12-26 01:16:56] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:17:06] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:17:17] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:17:27] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:17:38] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:17:48] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:17:58] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:18:09] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:18:19] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:18:29] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:18:40] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:18:50] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:19:00] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:19:11] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:19:21] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:19:31] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:19:42] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:19:52] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:20:02] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:20:13] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:20:23] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:20:33] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:20:44] default/nginx: Pod CPU efficiency stress detected. Triggering remediation.
+[2025-12-26 01:20:44] Detected anomalies for 'cpu_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 01:20:44] ALERT: cpu_allocation_efficiency anomalies detected. Manual inspection recommended.
+[2025-12-26 01:20:54] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:21:04] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:21:15] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:21:25] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:21:35] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:21:46] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:21:50] Retraining complete: new model and scaler saved.
+[2025-12-26 01:22:02] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:22:12] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:22:22] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:22:33] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:22:43] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:22:53] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:23:04] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:23:14] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:23:24] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:23:35] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:23:45] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:23:55] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:24:06] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:24:16] default/nginx: CPU stress detected but in cooldown.
+[2025-12-26 01:24:21] Monitor interrupted by user. Exiting.
+[2025-12-26 01:26:09] Saved model input shape mismatch. Will retrain model when enough history is available.
+[2025-12-26 01:26:09] Starting Prometheus monitor for default/nginx
+[2025-12-26 01:30:41] Model not available; collecting more history for retraining.
+[2025-12-26 01:31:11] Model not available; collecting more history for retraining.
+[2025-12-26 01:31:42] Model not available; collecting more history for retraining.
+[2025-12-26 01:32:12] Model not available; collecting more history for retraining.
+[2025-12-26 01:32:42] Model not available; collecting more history for retraining.
+[2025-12-26 01:33:17] Retraining complete: new model and scaler saved.
+[2025-12-26 01:33:23] Retraining complete: new model and scaler saved.
+[2025-12-26 01:38:27] Retraining complete: new model and scaler saved.
+[2025-12-26 01:43:31] Retraining complete: new model and scaler saved.
+[2025-12-26 01:48:35] Retraining complete: new model and scaler saved.
+[2025-12-26 01:53:39] Retraining complete: new model and scaler saved.
+[2025-12-26 01:57:21] Monitor interrupted by user. Exiting.
+[2025-12-26 01:57:47] Saved model input shape mismatch. Will retrain model when enough history is available.
+[2025-12-26 01:57:47] Starting Prometheus monitor for default/nginx
+[2025-12-26 01:58:54] Monitor interrupted by user. Exiting.
+[2025-12-26 01:59:38] Saved model input shape mismatch. Will retrain model when enough history is available.
+[2025-12-26 01:59:38] Starting Prometheus monitor for default/nginx
+[2025-12-26 02:01:39] Model not available; collecting more history for retraining.
+[2025-12-26 02:02:09] Model not available; collecting more history for retraining.
+[2025-12-26 02:02:39] Model not available; collecting more history for retraining.
+[2025-12-26 02:03:09] Model not available; collecting more history for retraining.
+[2025-12-26 02:03:39] Model not available; collecting more history for retraining.
+[2025-12-26 02:04:11] Retraining complete: new model and scaler saved.
+[2025-12-26 02:04:13] Retraining complete: new model and scaler saved.
+[2025-12-26 02:09:17] Retraining complete: new model and scaler saved.
+[2025-12-26 02:14:20] Retraining complete: new model and scaler saved.
+[2025-12-26 02:14:22] Monitor interrupted by user. Exiting.
+[2025-12-26 02:14:44] Error reading HISTORY_CSV for scaler fit: [Errno 2] No such file or directory: '/models/multi_scaler.pkl'
+[2025-12-26 02:15:35] Starting Prometheus monitor for default/nginx
+[2025-12-26 02:16:17] default/nginx: Stress detected in memory_allocation_efficiency. Triggering remediation.
+[2025-12-26 02:16:17] Anomaly detected in 'memory_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 02:16:17] Action: RESTART pod default/load-generator
+[2025-12-26 02:16:17] Not enough data to retrain model.
+[2025-12-26 02:16:28] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:16:38] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:16:49] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:16:59] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:09] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:20] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:30] default/nginx: Stress detected in cpu_allocation_efficiency. Triggering remediation.
+[2025-12-26 02:17:30] Anomaly detected in 'cpu_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 02:17:30] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:41] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:41] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:51] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:17:51] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:01] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:01] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:12] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:12] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:22] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:22] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:32] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:32] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:43] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:43] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:53] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:18:53] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:04] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:04] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:14] default/nginx: Stress detected in cpu_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:14] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:24] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:34] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:45] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:19:55] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:20:06] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:20:16] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:20:26] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:20:37] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:20:47] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:20:57] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:21:08] default/nginx: Stress detected in memory_allocation_efficiency but in cooldown.
+[2025-12-26 02:21:18] default/nginx: Stress detected in memory_allocation_efficiency. Triggering remediation.
+[2025-12-26 02:21:18] Anomaly detected in 'memory_allocation_efficiency' at indices [0] (total=1)
+[2025-12-26 02:21:18] Action: RESTART pod default/nginx-5869d7778c-kj5vt
+[2025-12-26 02:21:24] Retraining complete: new model and scaler saved.
+[2025-12-26 02:26:09] Monitor interrupted by user. Exiting.
