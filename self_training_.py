@@ -16,7 +16,6 @@ CSV = "prom_history.csv"
 FEATURES = [
     "cpu_allocation_efficiency",
     "memory_allocation_efficiency",
-    "disk_io",
     "network_latency",
     "node_temperature",
     "node_cpu_usage",

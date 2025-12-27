@@ -17,19 +17,18 @@ SEQ_LEN = 5
 HORIZON_STEPS = 5
 MODEL_PATH = "models\multi_k8s_model.keras"
 SCALER_PATH = "models\multi_scaler.pkl"
-SCALE_COOLDOWN_SEC = 5 * 60
+SCALE_COOLDOWN_SEC = 60
 RETRAIN_INTERVAL_SEC = 60 * 5
 SAMPLE_INTERVAL_SEC = 10
 
 # Seven pod-scoped features (names kept to match your CSV header)
 FEATURES = [
-    "cpu_allocation_efficiency",  # pod CPU usage / pod CPU request
-    "memory_allocation_efficiency",  # pod MEM usage / pod MEM request
-    "disk_io",  # pod read+write bytes/s
-    "network_latency",  # pod-level latency p95 (if available), else 0
-    "node_cpu_usage",  # interpreted as pod_cpu_usage_pct (kept name for CSV compatibility)
-    "node_memory_usage",  # interpreted as pod_memory_usage_pct (kept name for CSV compatibility)
-    "node_temperature",  # no per-pod temp; fallback to 0 (kept name for CSV compatibility)
+    "cpu_allocation_efficiency",
+    "memory_allocation_efficiency",
+    "network_latency",
+    "node_cpu_usage",
+    "node_memory_usage",
+    "node_temperature",
 ]
 
 
@@ -57,15 +56,15 @@ def prom_query_instant(expr: str) -> float:
 def fetch_features_for_workload(namespace: str, deployment: str) -> np.ndarray:
     # Pod-level CPU usage (cores)
     cpu_usage = prom_query_instant(
-        f'sum(rate(container_cpu_usage_seconds_total{{namespace="{namespace}", pod=~"{deployment}-.*", container!="POD", container!="", cpu="total"}}[1m]))'
+        f'sum(rate(container_cpu_usage_seconds_total{{namespace="{namespace}", pod=~"{deployment}-.*", container!="POD", container!=""}}[1m]))'
     )
 
     # Pod-level memory usage (bytes)
     mem_usage = prom_query_instant(
-        f'sum(container_memory_working_set_bytes{{namespace="{namespace}", pod=~"{deployment}.*"}})'
+        f'sum(container_memory_working_set_bytes{{namespace="{namespace}", pod=~"{deployment}-.*"}})'
     )
 
-    # Pod-level resource requests (avoid zero division)
+    # Pod-level resource requests
     cpu_req = (
         prom_query_instant(
             f'sum(kube_pod_container_resource_requests_cpu_cores{{namespace="{namespace}", pod=~"{deployment}-.*"}})'
@@ -79,70 +78,31 @@ def fetch_features_for_workload(namespace: str, deployment: str) -> np.ndarray:
         or 1e-6
     )
 
-    # Avoid division by zero or missing requests
-    if cpu_req < 1e-5:
-        cpu_eff = 0.0  # treat efficiency as 0 if no CPU request defined
-    else:
-        cpu_eff = cpu_usage / cpu_req
+    cpu_eff = 0.0 if cpu_req < 1e-5 else cpu_usage / cpu_req
+    mem_eff = 0.0 if mem_req < 1e-5 else mem_usage / mem_req
 
-    if mem_req < 1e-5:
-        mem_eff = 0.0  # treat efficiency as 0 if no memory request defined
-    else:
-        mem_eff = mem_usage / mem_req
-
-    # Pod-level disk IO (bytes/s)
-    disk_reads = prom_query_instant(
-        f'sum(rate(container_fs_reads_bytes_total{{namespace="{namespace}", pod=~"{deployment}-.*"}}[1m]))'
-    )
-    disk_writes = prom_query_instant(
-        f'sum(rate(container_fs_writes_bytes_total{{namespace="{namespace}", pod=~"{deployment}-.*"}}[1m]))'
-    )
-    disk_io = disk_reads + disk_writes
-
-    # Pod-level network throughput (bytes/s) - used as proxy for network activity
-    net_tx = prom_query_instant(
-        f'sum(rate(container_network_transmit_bytes_total{{namespace="{namespace}", pod=~"{deployment}-.*"}}[1m]))'
-    )
-    net_rx = prom_query_instant(
-        f'sum(rate(container_network_receive_bytes_total{{namespace="{namespace}", pod=~"{deployment}-.*"}}[1m]))'
-    )
-    net_throughput = net_tx + net_rx
-
-    # Pod-level latency (p95) if app exposes http_request_duration_seconds_bucket with pod label
+    # Pod-level latency (p95)
     latency_p95 = prom_query_instant(
         f'histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{{namespace="{namespace}", pod=~"{deployment}-.*"}}[1m])) by (le))'
     )
-    # If latency metric not present, prom_query_instant returns 0.0
 
-    # Pod CPU and memory as percentage of node capacity (keeps CSV column names)
+    # Pod CPU and memory as percentage of node capacity
     total_cpu = prom_query_instant("sum(machine_cpu_cores)") or 1.0
     total_mem = prom_query_instant("sum(machine_memory_bytes)") or 1.0
     pod_cpu_pct = (cpu_usage / total_cpu) * 100.0
     pod_mem_pct = (mem_usage / total_mem) * 100.0
 
-    # node_temperature has no per-pod equivalent; set to 0.0 (keeps CSV shape)
-    pod_temp = 0.0
+    pod_temp = 0.0  # placeholder
 
-    # Clip/limit some values to avoid extreme outliers
+    # Clip values
     cpu_eff = float(np.clip(cpu_eff, 0.0, 10.0))
     mem_eff = float(np.clip(mem_eff, 0.0, 10.0))
-    disk_io = float(np.clip(disk_io, 0.0, 1e12))
-    net_throughput = float(np.clip(net_throughput, 0.0, 1e12))
     latency_p95 = float(np.clip(latency_p95, 0.0, 1e6))
     pod_cpu_pct = float(np.clip(pod_cpu_pct, 0.0, 100.0))
     pod_mem_pct = float(np.clip(pod_mem_pct, 0.0, 100.0))
 
-    # Return in the same order as FEATURES
     return np.array(
-        [
-            cpu_eff,
-            mem_eff,
-            disk_io,
-            latency_p95,
-            pod_cpu_pct,
-            pod_mem_pct,
-            pod_temp,
-        ],
+        [cpu_eff, mem_eff, latency_p95, pod_cpu_pct, pod_mem_pct, pod_temp],
         dtype=np.float32,
     )
 
@@ -387,8 +347,8 @@ def run_monitor_loop(target_namespace="default", target_deployment="nginx"):
                     "memory_allocation_efficiency": 0.8,
                     "disk_io": 1e9,  # example: 1 GB/s
                     "network_latency": 500,  # example: 500 ms
-                    "node_cpu_usage": 80,  # percent
-                    "node_memory_usage": 80,  # percent
+                    "node_cpu_usage": 3,  # percent
+                    "node_memory_usage": 0.7,  # percent
                     "node_temperature": 85,  # degrees C
                 }
 
@@ -396,21 +356,30 @@ def run_monitor_loop(target_namespace="default", target_deployment="nginx"):
                 if threshold is None:
                     continue
 
-                stress_detected = value_now > threshold or future_max > threshold
+                current_stress = value_now > threshold
+                predicted_stress = future_max > threshold
+                stress_detected = current_stress or predicted_stress
+                
 
                 if stress_detected:
                     last_scale = last_scale_ts.get(feat, 0)
+
                     if time.time() - last_scale > SCALE_COOLDOWN_SEC:
                         last_scale_ts[feat] = time.time()
+
                         log_remediation(
-                            f"{key}: Stress detected in {feat}. Triggering remediation."
+                            f"{key}: Remediation triggered | feature={feat} | "
+                            f"now={value_now:.2f} | pred_max={future_max:.2f} | "
+                            f"threshold={threshold} | "
+                            f"current_stress={current_stress} | predicted_stress={predicted_stress}"
                         )
-                        simple_remediation(feat, np.array([0]))
+
+                        simple_remediation(feat, np.array([value_now]))
                     else:
-                        if last_scale > 0:
-                            log_remediation(
-                                f"{key}: Stress detected in {feat} but in cooldown."
-                            )
+                        log_remediation(
+                            f"{key} | {feat} in cooldown, remediation skipped"
+        )
+
 
             # Periodic retrain
             if time.time() - last_retrain_ts > RETRAIN_INTERVAL_SEC:

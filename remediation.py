@@ -349,12 +349,12 @@ except Exception:
 # --- Config ---
 FILE_PATH = "prom_history.csv"
 SEQ_LEN = 5
-MAD_K = 3.0
-FALLBACK_Q = 0.98
+MAD_K = 1.5
+FALLBACK_Q = 0.80
 MIN_PTS = 5
 
 # Toggle dry-run for safe testing
-DRY_RUN = False
+DRY_RUN = True  # Set True for demo, False for real remediation
 REMEDIATE = True
 
 REM_LOG = "remediation_log.txt"
@@ -386,6 +386,7 @@ REMEDIATION_PLAN = {
 }
 
 
+# --- Utility Functions ---
 def now_ts():
     return int(time.time())
 
@@ -464,7 +465,6 @@ def cordon_node_via_kubectl(node_name):
 
 
 def choose_pod_for_restart(namespace="default"):
-    # Try Kubernetes client first
     if K8S_AVAILABLE and ensure_kube_config_loaded():
         try:
             v1 = k8s_client.CoreV1Api()
@@ -473,7 +473,6 @@ def choose_pod_for_restart(namespace="default"):
                 return pods.items[0].metadata.name
         except Exception:
             pass
-    # Fallback to kubectl
     try:
         out = (
             subprocess.check_output(
@@ -497,7 +496,6 @@ def choose_pod_for_restart(namespace="default"):
 
 
 def get_current_replicas(deployment, namespace):
-    # Try Kubernetes client first
     if K8S_AVAILABLE and ensure_kube_config_loaded():
         try:
             api = k8s_client.AppsV1Api()
@@ -506,7 +504,6 @@ def get_current_replicas(deployment, namespace):
             ).spec.replicas
         except Exception:
             pass
-    # Fallback to kubectl
     try:
         out = (
             subprocess.check_output(
@@ -530,6 +527,7 @@ def get_current_replicas(deployment, namespace):
         return 1
 
 
+# --- Remediation Logic ---
 def simple_remediation(feature, indices):
     plan = REMEDIATION_PLAN.get(feature, {"action": "alert_only"})
     action = plan.get("action", "alert_only")
@@ -590,14 +588,8 @@ def simple_remediation(feature, indices):
         return False
 
 
+# --- Main ---
 def run_offline_training_and_remediation():
-    """
-    Offline mode:
-    - trains a small Transformer on the historical CSV (same 7 features)
-    - detects anomalies using MAD
-    - runs remediation actions accordingly
-    - produces prediction_plot_with_anomalies.png
-    """
     df = pd.read_csv(FILE_PATH)
 
     features = [
@@ -616,7 +608,7 @@ def run_offline_training_and_remediation():
             f"Not enough rows for offline training. Need >= {SEQ_LEN + 1}, got {df.shape[0]}"
         )
 
-    df = df.tail(800)  # keep last N for faster runs
+    df = df.tail(800)  # keep last N rows for demo
 
     scaler = MinMaxScaler()
     scaled = scaler.fit_transform(df.values)
@@ -630,6 +622,7 @@ def run_offline_training_and_remediation():
     X = np.array(X, dtype=np.float32)
     y = np.array(y, dtype=np.float32)
 
+    # Transformer model
     inputs = layers.Input(shape=(SEQ_LEN, X.shape[2]))
     attn = layers.MultiHeadAttention(num_heads=2, key_dim=max(1, X.shape[2] // 2))(
         inputs, inputs
@@ -693,7 +686,6 @@ def run_offline_training_and_remediation():
         plt.title(feat)
         plt.xlabel("Sample")
         plt.ylabel("Value")
-
         handles, labels = plt.gca().get_legend_handles_labels()
         seen, H, L = set(), [], []
         for h, l in zip(handles, labels):
@@ -706,7 +698,6 @@ def run_offline_training_and_remediation():
     plt.tight_layout()
     plt.savefig("prediction_plot_with_anomalies.png")
     plt.close()
-
     print("Saved: prediction_plot_with_anomalies.png")
     log_remediation("Offline remediation run complete.")
 

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tiny-disk-test
+spec:
+  containers:
+    - name: disk
+      image: busybox:1.36
+      command: ["sh", "-c", "while true; do echo 'x' >> /tmp/testfile.txt; sleep 1; done"]
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "20m"
+          memory: "32Mi"
+  restartPolicy: Always

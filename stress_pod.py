@@ -3,40 +3,56 @@ import subprocess
 
 NAMESPACE = "default"
 LABEL_SELECTOR = "app=nginx"
-STRESS_SECONDS = 40   # shorter duration, safe default
+STRESS_SECONDS = 30  # duration of stress
+
 
 def kubectl_get_pod_by_label(namespace: str, label_selector: str) -> str:
     cmd = [
-        "kubectl", "get", "pods", "-n", namespace,
-        "-l", label_selector, "-o", "jsonpath={.items[0].metadata.name}",
+        "kubectl",
+        "get",
+        "pods",
+        "-n",
+        namespace,
+        "-l",
+        label_selector,
+        "-o",
+        "jsonpath={.items[0].metadata.name}",
     ]
     out = subprocess.check_output(cmd, stderr=subprocess.STDOUT).decode().strip()
     if not out:
         raise RuntimeError(f"No pod found for label {label_selector} in {namespace}")
     return out
 
+
 def start_cpu_mem_stress(pod_name: str, namespace: str, seconds: int):
-    # Allocate ~10 MB RAM and run a simple loop for CPU
-    pod_script = (
-        'echo "Starting safe stress"; '
+    # Light CPU + memory stress using shell only
+    # ~8 MB memory allocation, light CPU loop
+    stress_script = (
+        'echo "[pod] Starting light stress"; '
         'awk "BEGIN { '
-        '  print \\"[pod] allocating memory...\\"; '
-        '  for(i=0; i<1024*1024*2; i++) a[i]=i; '   # ~8 MB RAM
-        '  print \\"[pod] memory allocated\\"; '
-        f'  end = systime() + {seconds}; '
-        '  while (systime() < end) { x = x + 1; } '
-        '  print \\"[pod] Stress finished\\"; '
+        "  a[0]=0; for(i=0;i<1024*1024;i++) a[i]=i; "  # ~8 MB memory
+        f"  end=systime()+{seconds}; x=0; while(systime()<end) x=x+1; "
+        '  print \\"[pod] Light stress finished\\"; '
         '}"'
     )
 
     cmd = [
-        "kubectl", "exec", "-n", namespace, pod_name,
-        "--", "sh", "-c", pod_script
+        "kubectl",
+        "exec",
+        "-n",
+        namespace,
+        pod_name,
+        "--",
+        "sh",
+        "-c",
+        stress_script,
     ]
-
-    print(f"Starting safe CPU+memory stress in {namespace}/{pod_name} for {seconds}s ...")
+    print(
+        f"Starting light CPU+memory stress in {namespace}/{pod_name} for {seconds}s ..."
+    )
     subprocess.call(cmd)
     print("Stress finished.")
+
 
 if __name__ == "__main__":
     try:

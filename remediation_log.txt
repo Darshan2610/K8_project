@@ -828,3 +828,165 @@
 [2025-12-26 02:21:18] Action: RESTART pod default/nginx-5869d7778c-kj5vt
 [2025-12-26 02:21:24] Retraining complete: new model and scaler saved.
 [2025-12-26 02:26:09] Monitor interrupted by user. Exiting.
+[2025-12-27 22:14:19] Starting Prometheus monitor for default/nginx
+[2025-12-27 22:25:24] Saved model input shape mismatch. Will retrain model when enough history is available.
+[2025-12-27 22:25:24] Starting Prometheus monitor for default/nginx
+[2025-12-27 22:26:05] Model not available; collecting more history for retraining.
+[2025-12-27 22:26:15] Model not available; collecting more history for retraining.
+[2025-12-27 22:26:25] Model not available; collecting more history for retraining.
+[2025-12-27 22:26:35] Model not available; collecting more history for retraining.
+[2025-12-27 22:26:45] Model not available; collecting more history for retraining.
+[2025-12-27 22:26:59] Retraining complete: new model and scaler saved.
+[2025-12-27 22:27:04] Retraining complete: new model and scaler saved.
+[2025-12-27 22:32:17] Retraining complete: new model and scaler saved.
+[2025-12-27 22:37:30] Retraining complete: new model and scaler saved.
+[2025-12-27 22:42:43] Retraining complete: new model and scaler saved.
+[2025-12-27 22:47:55] Retraining complete: new model and scaler saved.
+[2025-12-27 22:53:05] Retraining complete: new model and scaler saved.
+[2025-12-27 22:53:22] Monitor interrupted by user. Exiting.
+[2025-12-27 22:53:35] Starting Prometheus monitor for default/nginx
+[2025-12-27 22:54:15] default/nginx: Stress detected in node_cpu_usage. Triggering remediation.
+[2025-12-27 22:54:15] Anomaly detected in 'node_cpu_usage' at indices [0] (total=1)
+[2025-12-27 22:54:16] [DRY-RUN] Would run: kubectl scale deployment nginx -n default --replicas=3
+[2025-12-27 22:54:16] default/nginx: Stress detected in node_memory_usage. Triggering remediation.
+[2025-12-27 22:54:16] Anomaly detected in 'node_memory_usage' at indices [0] (total=1)
+[2025-12-27 22:54:16] Action: RESTART pod default/nginx-5869d7778c-j5tfs
+[2025-12-27 22:54:16] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-j5tfs -n default
+[2025-12-27 22:54:16] Not enough data to retrain model.
+[2025-12-27 22:54:26] default/nginx: Stress detected in node_cpu_usage but in cooldown.
+[2025-12-27 22:54:26] default/nginx: Stress detected in node_memory_usage but in cooldown.
+[2025-12-27 22:54:36] default/nginx: Stress detected in node_cpu_usage but in cooldown.
+[2025-12-27 22:54:36] default/nginx: Stress detected in node_memory_usage but in cooldown.
+[2025-12-27 22:54:46] default/nginx: Stress detected in node_cpu_usage but in cooldown.
+[2025-12-27 22:54:46] default/nginx: Stress detected in node_memory_usage but in cooldown.
+[2025-12-27 22:54:57] default/nginx: Stress detected in node_cpu_usage but in cooldown.
+[2025-12-27 22:54:57] default/nginx: Stress detected in node_memory_usage but in cooldown.
+[2025-12-27 22:55:07] default/nginx: Stress detected in node_cpu_usage but in cooldown.
+[2025-12-27 22:55:07] default/nginx: Stress detected in node_memory_usage but in cooldown.
+[2025-12-27 22:55:17] default/nginx: Stress detected in node_cpu_usage but in cooldown.
+[2025-12-27 22:55:17] default/nginx: Stress detected in node_memory_usage but in cooldown.
+[2025-12-27 22:55:27] Monitor interrupted by user. Exiting.
+[2025-12-27 23:02:52] Saved model input shape mismatch. Will retrain model when enough history is available.
+[2025-12-27 23:02:52] Starting Prometheus monitor for default/nginx
+[2025-12-27 23:03:33] Model not available; collecting more history for retraining.
+[2025-12-27 23:03:43] Model not available; collecting more history for retraining.
+[2025-12-27 23:03:53] Model not available; collecting more history for retraining.
+[2025-12-27 23:04:03] Model not available; collecting more history for retraining.
+[2025-12-27 23:04:13] Model not available; collecting more history for retraining.
+[2025-12-27 23:04:25] Retraining complete: new model and scaler saved.
+[2025-12-27 23:04:26] cpu_allocation_efficiency: now=0.00, pred_max=0.03, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:26] memory_allocation_efficiency: now=0.00, pred_max=0.02, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:26] network_latency: now=0.00, pred_max=0.03, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:26] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:26] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:04:26] default/nginx: Remediation triggered for node_memory_usage (current=True, predicted=True)
+[2025-12-27 23:04:26] Anomaly detected in 'node_memory_usage' at indices [0.8469482] (total=1)
+[2025-12-27 23:04:26] Action: RESTART pod default/nginx-5869d7778c-j5tfs
+[2025-12-27 23:04:26] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-j5tfs -n default
+[2025-12-27 23:04:26] node_temperature: now=0.00, pred_max=0.04, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:27] Retraining complete: new model and scaler saved.
+[2025-12-27 23:04:37] cpu_allocation_efficiency: now=0.00, pred_max=0.04, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:37] memory_allocation_efficiency: now=0.00, pred_max=0.03, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:37] network_latency: now=0.00, pred_max=0.04, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:37] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:37] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:04:37] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:04:37] node_temperature: now=0.00, pred_max=0.05, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:48] cpu_allocation_efficiency: now=0.00, pred_max=0.04, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:48] memory_allocation_efficiency: now=0.00, pred_max=0.02, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:48] network_latency: now=0.00, pred_max=0.04, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:48] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:48] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:04:48] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:04:48] node_temperature: now=0.00, pred_max=0.05, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:58] cpu_allocation_efficiency: now=0.00, pred_max=0.05, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:58] memory_allocation_efficiency: now=0.00, pred_max=0.02, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:58] network_latency: now=0.00, pred_max=0.03, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:58] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:04:58] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:04:58] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:04:58] node_temperature: now=0.00, pred_max=0.04, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:08] cpu_allocation_efficiency: now=0.00, pred_max=0.06, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:08] memory_allocation_efficiency: now=0.00, pred_max=0.03, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:08] network_latency: now=0.00, pred_max=0.02, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:08] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:08] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:05:08] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:05:08] node_temperature: now=0.00, pred_max=0.04, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:18] cpu_allocation_efficiency: now=0.00, pred_max=0.06, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:18] memory_allocation_efficiency: now=0.00, pred_max=0.04, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:18] network_latency: now=0.00, pred_max=0.02, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:18] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:18] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:05:18] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:05:18] node_temperature: now=0.00, pred_max=0.04, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:28] cpu_allocation_efficiency: now=0.00, pred_max=0.06, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:28] memory_allocation_efficiency: now=0.00, pred_max=0.03, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:28] network_latency: now=0.00, pred_max=0.02, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:28] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:28] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:05:28] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:05:28] node_temperature: now=0.00, pred_max=0.04, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:38] cpu_allocation_efficiency: now=0.00, pred_max=0.04, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:38] memory_allocation_efficiency: now=0.00, pred_max=0.02, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:38] network_latency: now=0.00, pred_max=0.01, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:38] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:38] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:05:38] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:05:38] node_temperature: now=0.00, pred_max=0.04, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:48] cpu_allocation_efficiency: now=0.00, pred_max=0.03, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:48] memory_allocation_efficiency: now=0.00, pred_max=0.01, threshold=0.8, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:48] network_latency: now=0.00, pred_max=0.02, threshold=500, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:48] node_cpu_usage: now=0.00, pred_max=0.00, threshold=2, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:48] node_memory_usage: now=0.85, pred_max=0.85, threshold=0.5, current_stress=True, predicted_stress=True
+[2025-12-27 23:05:48] default/nginx: Stress in node_memory_usage detected but cooldown active.
+[2025-12-27 23:05:48] node_temperature: now=0.00, pred_max=0.03, threshold=85, current_stress=False, predicted_stress=False
+[2025-12-27 23:05:50] Monitor interrupted by user. Exiting.
+[2025-12-27 23:06:47] Starting Prometheus monitor for default/nginx
+[2025-12-27 23:07:01] Monitor interrupted by user. Exiting.
+[2025-12-27 23:09:54] Starting Prometheus monitor for default/nginx
+[2025-12-27 23:10:35] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.79 | pred_max=1.30 | threshold=0.5 | current_stress=True | predicted_stress=True
+[2025-12-27 23:10:35] Anomaly detected in 'node_memory_usage' at indices [0.7863789] (total=1)
+[2025-12-27 23:10:35] Action: RESTART pod default/nginx-5869d7778c-j5tfs
+[2025-12-27 23:10:35] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-j5tfs -n default
+[2025-12-27 23:10:35] Not enough data to retrain model.
+[2025-12-27 23:10:46] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:10:56] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:11:06] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:11:16] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:11:26] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:11:36] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.36 | pred_max=1.00 | threshold=0.5 | current_stress=False | predicted_stress=True
+[2025-12-27 23:11:36] Anomaly detected in 'node_memory_usage' at indices [0.36004245] (total=1)
+[2025-12-27 23:11:36] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-27 23:11:36] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-27 23:11:46] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:11:57] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:12:07] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:12:17] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:12:27] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:12:37] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.36 | pred_max=0.90 | threshold=0.5 | current_stress=False | predicted_stress=True
+[2025-12-27 23:12:37] Anomaly detected in 'node_memory_usage' at indices [0.35999134] (total=1)
+[2025-12-27 23:12:37] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-27 23:12:37] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-27 23:12:47] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:12:57] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:13:08] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:13:18] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:13:28] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:13:38] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.36 | pred_max=0.90 | threshold=0.5 | current_stress=False | predicted_stress=True
+[2025-12-27 23:13:38] Anomaly detected in 'node_memory_usage' at indices [0.36004245] (total=1)
+[2025-12-27 23:13:38] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-27 23:13:38] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-27 23:13:48] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:13:58] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:14:08] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:14:19] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:14:29] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:14:39] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.36 | pred_max=0.90 | threshold=0.5 | current_stress=False | predicted_stress=True
+[2025-12-27 23:14:39] Anomaly detected in 'node_memory_usage' at indices [0.36004245] (total=1)
+[2025-12-27 23:14:39] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-27 23:14:39] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-27 23:14:49] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:14:59] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:15:09] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-27 23:15:15] Monitor interrupted by user. Exiting.
