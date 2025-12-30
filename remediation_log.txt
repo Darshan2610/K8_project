@@ -990,3 +990,77 @@
 [2025-12-27 23:14:59] default/nginx | node_memory_usage in cooldown, remediation skipped
 [2025-12-27 23:15:09] default/nginx | node_memory_usage in cooldown, remediation skipped
 [2025-12-27 23:15:15] Monitor interrupted by user. Exiting.
+[2025-12-29 09:42:31] Starting Prometheus monitor for default/nginx
+[2025-12-29 09:45:34] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.00 | pred_max=1.33 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 09:45:34] Anomaly detected in 'node_memory_usage' at indices [0.0] (total=1)
+[2025-12-29 09:45:34] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:45:34] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:45:34] Not enough data to retrain model.
+[2025-12-29 09:46:14] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:46:52] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.00 | pred_max=1.33 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 09:46:52] Anomaly detected in 'node_memory_usage' at indices [0.0] (total=1)
+[2025-12-29 09:46:52] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:46:52] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:47:31] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:48:10] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.00 | pred_max=1.33 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 09:48:10] Anomaly detected in 'node_memory_usage' at indices [0.0] (total=1)
+[2025-12-29 09:48:10] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:48:10] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:48:49] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:49:27] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.00 | pred_max=1.33 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 09:49:27] Anomaly detected in 'node_memory_usage' at indices [0.0] (total=1)
+[2025-12-29 09:49:27] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:49:27] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:49:58] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:50:08] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:50:18] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:50:29] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.44 | pred_max=1.20 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 09:50:29] Anomaly detected in 'node_memory_usage' at indices [0.44192603] (total=1)
+[2025-12-29 09:50:29] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:50:29] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:50:39] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:50:43] Retraining complete: new model and scaler saved.
+[2025-12-29 09:50:54] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:51:04] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:51:15] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:51:25] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.68 | pred_max=0.31 | threshold=3 | current_stress=True | predicted_stress=False
+[2025-12-29 09:51:25] Anomaly detected in 'node_cpu_usage' at indices [4.682817] (total=1)
+[2025-12-29 09:51:25] [DRY-RUN] Would run: kubectl scale deployment nginx -n default --replicas=2
+[2025-12-29 09:51:25] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:51:35] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:51:35] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.20 | pred_max=0.27 | threshold=0.7 | current_stress=True | predicted_stress=False
+[2025-12-29 09:51:35] Anomaly detected in 'node_memory_usage' at indices [2.200174] (total=1)
+[2025-12-29 09:51:35] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:51:35] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:51:45] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:51:45] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:51:56] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:51:56] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:52:06] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:52:16] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:53:28] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.20 | pred_max=0.07 | threshold=0.7 | current_stress=True | predicted_stress=False
+[2025-12-29 09:53:28] Anomaly detected in 'node_memory_usage' at indices [2.1988964] (total=1)
+[2025-12-29 09:53:28] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:53:28] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:53:38] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:53:49] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.47 | pred_max=0.27 | threshold=3 | current_stress=True | predicted_stress=False
+[2025-12-29 09:53:49] Anomaly detected in 'node_cpu_usage' at indices [4.4689193] (total=1)
+[2025-12-29 09:53:49] [DRY-RUN] Would run: kubectl scale deployment nginx -n default --replicas=2
+[2025-12-29 09:53:49] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:53:59] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:54:09] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:56:31] Retraining complete: new model and scaler saved.
+[2025-12-29 09:57:13] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.20 | pred_max=0.12 | threshold=0.7 | current_stress=True | predicted_stress=False
+[2025-12-29 09:57:13] Anomaly detected in 'node_memory_usage' at indices [2.198283] (total=1)
+[2025-12-29 09:57:13] Action: RESTART pod default/nginx-5869d7778c-rt68c
+[2025-12-29 09:57:13] [DRY-RUN] Would run: kubectl delete pod nginx-5869d7778c-rt68c -n default
+[2025-12-29 09:57:23] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:57:33] default/nginx: Remediation triggered | feature=node_cpu_usage | now=3.50 | pred_max=0.93 | threshold=3 | current_stress=True | predicted_stress=False
+[2025-12-29 09:57:33] Anomaly detected in 'node_cpu_usage' at indices [3.5003352] (total=1)
+[2025-12-29 09:57:34] [DRY-RUN] Would run: kubectl scale deployment nginx -n default --replicas=2
+[2025-12-29 09:57:34] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:57:44] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 09:57:44] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 09:57:54] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 10:01:44] Retraining complete: new model and scaler saved.
+[2025-12-29 10:04:28] Monitor interrupted by user. Exiting.

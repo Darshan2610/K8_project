@@ -1,0 +1,76 @@
+[2025-12-29 10:27:27] Starting Prometheus monitor for default/nginx
+[2025-12-29 10:28:08] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.44 | pred_max=0.79 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 10:37:02] Starting Prometheus monitor for default/nginx
+[2025-12-29 10:37:43] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.44 | pred_max=0.79 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 10:37:43] Scaling default/nginx: 1 -> 2 (triggered by node_memory_usage)
+[2025-12-29 10:37:43] Not enough data to retrain model.
+[2025-12-29 10:37:54] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:38:05] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:38:15] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:38:25] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:38:35] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:38:46] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.57 | pred_max=0.82 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 10:38:46] Scaling default/nginx: 1 -> 2 (triggered by node_memory_usage)
+[2025-12-29 10:38:56] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:39:06] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:39:17] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:39:27] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:39:37] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:39:48] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.92 | pred_max=0.86 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 10:39:48] Scaling default/nginx: 2 -> 3 (triggered by node_memory_usage)
+[2025-12-29 10:39:58] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:40:08] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:40:19] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:40:29] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:40:39] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:40:50] default/nginx: Remediation triggered | feature=node_memory_usage | now=1.28 | pred_max=0.88 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 10:40:50] Scaling default/nginx: 3 -> 4 (triggered by node_memory_usage)
+[2025-12-29 10:41:00] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:41:11] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:41:21] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:41:31] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:41:41] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:41:52] default/nginx: Remediation triggered | feature=node_memory_usage | now=1.63 | pred_max=0.90 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 10:41:52] Scaling default/nginx: 4 -> 5 (triggered by node_memory_usage)
+[2025-12-29 10:42:02] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:42:13] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:42:23] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:42:33] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:42:43] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:42:54] default/nginx: Remediation triggered | feature=node_memory_usage | now=1.99 | pred_max=0.91 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 10:42:54] Scaling default/nginx: 5 -> 6 (triggered by node_memory_usage)
+[2025-12-29 10:42:58] Retraining complete: new model and scaler saved.
+[2025-12-29 10:43:10] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:43:20] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 10:43:29] Monitor interrupted by user. Exiting.
+[2025-12-29 15:10:02] Starting Prometheus monitor for default/nginx
+[2025-12-29 15:10:43] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.62 | pred_max=0.87 | threshold=0.7 | current_stress=False | predicted_stress=True
+[2025-12-29 15:10:43] Scaling default/nginx: 1 -> 2 (triggered by node_memory_usage)
+[2025-12-29 15:10:43] Not enough data to retrain model.
+[2025-12-29 15:10:54] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:11:04] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:11:15] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:11:25] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:11:35] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:11:45] default/nginx: Remediation triggered | feature=node_memory_usage | now=0.98 | pred_max=0.86 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 15:11:46] Scaling default/nginx: 2 -> 3 (triggered by node_memory_usage)
+[2025-12-29 15:11:56] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:12:06] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:12:16] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:12:27] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:12:37] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:12:47] default/nginx: Remediation triggered | feature=node_memory_usage | now=1.32 | pred_max=0.87 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 15:12:48] Scaling default/nginx: 3 -> 4 (triggered by node_memory_usage)
+[2025-12-29 15:12:58] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:13:08] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:13:18] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:13:29] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:13:39] default/nginx: Remediation triggered | feature=node_cpu_usage | now=3.68 | pred_max=0.58 | threshold=3 | current_stress=True | predicted_stress=False
+[2025-12-29 15:13:39] Scaling default/nginx: 4 -> 5 (triggered by node_cpu_usage)
+[2025-12-29 15:13:39] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:13:50] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 15:13:50] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.72 | pred_max=0.89 | threshold=0.7 | current_stress=True | predicted_stress=True
+[2025-12-29 15:13:50] Scaling default/nginx: 5 -> 6 (triggered by node_memory_usage)
+[2025-12-29 15:14:00] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2025-12-29 15:14:00] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2025-12-29 15:14:11] default/nginx | node_memory_usage in cooldown, remediation skipped
