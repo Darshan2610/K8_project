@@ -13,12 +13,12 @@ from sklearn.preprocessing import MinMaxScaler
 
 # --- Config ---
 HISTORY_CSV = "prom_history.csv"
-SEQ_LEN = 5
+SEQ_LEN = 20
 HORIZON_STEPS = 5
 MODEL_PATH = "models\multi_k8s_model.keras"
 SCALER_PATH = "models\multi_scaler.pkl"
-SCALE_COOLDOWN_SEC = 60
-RETRAIN_INTERVAL_SEC = 60 * 5
+SCALE_COOLDOWN_SEC = 60*2
+RETRAIN_INTERVAL_SEC = 60
 SAMPLE_INTERVAL_SEC = 10
 
 # Seven pod-scoped features (names kept to match your CSV header)
@@ -78,8 +78,13 @@ def fetch_features_for_workload(namespace: str, deployment: str) -> np.ndarray:
         or 1e-6
     )
 
-    cpu_eff = 0.0 if cpu_req < 1e-5 else cpu_usage / cpu_req
-    mem_eff = 0.0 if mem_req < 1e-5 else mem_usage / mem_req
+    # cpu_eff = 0.0 if cpu_req < 1e-5 else cpu_usage / cpu_req
+    # mem_eff = 0.0 if mem_req < 1e-5 else mem_usage / mem_req
+    # Ensure CPU request is at least 0.01 cores
+    cpu_eff = cpu_usage / max(cpu_req, 0.01)
+
+    # Ensure memory request is at least 1 MB
+    mem_eff = mem_usage / max(mem_req, 1024 * 1024)
 
     # Pod-level latency (p95)
     latency_p95 = prom_query_instant(
@@ -343,12 +348,12 @@ def run_monitor_loop(target_namespace="default", target_deployment="nginx"):
                     future_max = np.max(future_vals)
 
                 THRESHOLDS = {
-                    "cpu_allocation_efficiency": 0.8,
-                    "memory_allocation_efficiency": 0.8,
+                    "cpu_allocation_efficiency": 11,
+                    "memory_allocation_efficiency": 12,
                     "disk_io": 1e9,  # example: 1 GB/s
                     "network_latency": 500,  # example: 500 ms
-                    "node_cpu_usage": 3,  # percent
-                    "node_memory_usage": 0.7,  # percent
+                    "node_cpu_usage": 4,  # percent
+                    "node_memory_usage": 2,  # percent
                     "node_temperature": 85,  # degrees C
                 }
 
@@ -359,7 +364,6 @@ def run_monitor_loop(target_namespace="default", target_deployment="nginx"):
                 current_stress = value_now > threshold
                 predicted_stress = future_max > threshold
                 stress_detected = current_stress or predicted_stress
-                
 
                 if stress_detected:
                     last_scale = last_scale_ts.get(feat, 0)
@@ -378,8 +382,7 @@ def run_monitor_loop(target_namespace="default", target_deployment="nginx"):
                     else:
                         log_remediation(
                             f"{key} | {feat} in cooldown, remediation skipped"
-        )
-
+                        )
 
             # Periodic retrain
             if time.time() - last_retrain_ts > RETRAIN_INTERVAL_SEC:

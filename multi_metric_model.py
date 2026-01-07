@@ -8,7 +8,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 # --- Config ---
 FILE_PATH = "prom_history.csv"
-SEQ_LEN = 5
+SEQ_LEN = 20
 HORIZON_STEPS = 5
 SCALER_PATH = "models/multi_scaler.pkl"
 MODEL_PATH = "models/multi_k8s_model.keras"

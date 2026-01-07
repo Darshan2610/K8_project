@@ -74,3 +74,186 @@
 [2025-12-29 15:14:00] default/nginx | node_cpu_usage in cooldown, remediation skipped
 [2025-12-29 15:14:00] default/nginx | node_memory_usage in cooldown, remediation skipped
 [2025-12-29 15:14:11] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 18:46:49] Starting Prometheus monitor for default/nginx
+[2026-01-05 18:47:30] Not enough data to retrain model.
+[2026-01-05 18:50:25] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.01 | pred_max=0.54 | threshold=4 | current_stress=True | predicted_stress=False
+[2026-01-05 18:50:25] Scaling default/nginx: 1 -> 2 (triggered by node_cpu_usage)
+[2026-01-05 18:52:43] Retraining complete: new model and scaler saved.
+[2026-01-05 18:57:55] Retraining complete: new model and scaler saved.
+[2026-01-05 19:00:58] Monitor interrupted by user. Exiting.
+[2026-01-05 19:18:35] Starting Prometheus monitor for default/nginx
+[2026-01-05 19:31:18] Not enough data to retrain model.
+[2026-01-05 19:36:23] Retraining complete: new model and scaler saved.
+[2026-01-05 19:37:06] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.26 | pred_max=0.04 | threshold=4 | current_stress=True | predicted_stress=False
+[2026-01-05 19:37:06] Scaling default/nginx: 1 -> 2 (triggered by node_cpu_usage)
+[2026-01-05 19:37:16] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 19:37:26] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 19:38:18] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.11 | pred_max=0.06 | threshold=4 | current_stress=True | predicted_stress=False
+[2026-01-05 19:38:18] Scaling default/nginx: 2 -> 3 (triggered by node_cpu_usage)
+[2026-01-05 19:39:20] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.14 | pred_max=0.06 | threshold=4 | current_stress=True | predicted_stress=False
+[2026-01-05 19:39:20] Scaling default/nginx: 3 -> 4 (triggered by node_cpu_usage)
+[2026-01-05 19:39:33] Monitor interrupted by user. Exiting.
+[2026-01-05 20:04:33] Failed to load saved model. Will retrain when possible.
+[2026-01-05 20:04:33] Starting Prometheus monitor for default/nginx
+[2026-01-05 20:07:45] Model not available; collecting more history for retraining.
+[2026-01-05 20:07:55] Model not available; collecting more history for retraining.
+[2026-01-05 20:08:05] Model not available; collecting more history for retraining.
+[2026-01-05 20:08:15] Model not available; collecting more history for retraining.
+[2026-01-05 20:08:25] Model not available; collecting more history for retraining.
+[2026-01-05 20:08:37] Retraining complete: new model and scaler saved.
+[2026-01-05 20:08:39] Retraining complete: new model and scaler saved.
+[2026-01-05 20:13:45] Retraining complete: new model and scaler saved.
+[2026-01-05 20:17:37] Monitor interrupted by user. Exiting.
+[2026-01-05 20:23:18] Starting Prometheus monitor for default/nginx
+[2026-01-05 20:26:31] Not enough data to retrain model.
+[2026-01-05 20:27:22] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.30 | pred_max=1.43 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-05 20:27:22] Scaling default/nginx: 4 -> 5 (triggered by node_memory_usage)
+[2026-01-05 20:27:32] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:27:42] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:27:52] default/nginx: Remediation triggered | feature=node_cpu_usage | now=4.05 | pred_max=0.00 | threshold=4 | current_stress=True | predicted_stress=False
+[2026-01-05 20:27:52] Scaling default/nginx: 5 -> 6 (triggered by node_cpu_usage)
+[2026-01-05 20:27:53] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:28:23] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.12 | pred_max=1.43 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-05 20:28:23] Scaling default/nginx: 6 -> 7 (triggered by node_memory_usage)
+[2026-01-05 20:28:33] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:28:43] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:28:53] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=0.00 | pred_max=0.98 | threshold=0.8 | current_stress=False | predicted_stress=True
+[2026-01-05 20:28:54] Scaling default/nginx: 7 -> 8 (triggered by memory_allocation_efficiency)
+[2026-01-05 20:28:54] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:29:02] Monitor interrupted by user. Exiting.
+[2026-01-05 20:33:25] Starting Prometheus monitor for default/nginx
+[2026-01-05 20:36:37] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.85 | pred_max=1.02 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-05 20:36:37] Scaling default/nginx: 8 -> 9 (triggered by node_memory_usage)
+[2026-01-05 20:36:37] Not enough data to retrain model.
+[2026-01-05 20:36:48] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:36:58] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:37:08] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:37:18] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:37:28] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:37:38] default/nginx: Remediation triggered | feature=node_memory_usage | now=3.19 | pred_max=1.02 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-05 20:37:38] Scaling default/nginx: 9 -> 10 (triggered by node_memory_usage)
+[2026-01-05 20:37:49] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-05 20:41:43] Retraining complete: new model and scaler saved.
+[2026-01-05 20:44:19] Monitor interrupted by user. Exiting.
+[2026-01-05 20:51:52] Starting Prometheus monitor for default/nginx
+[2026-01-05 20:55:06] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=0.31 | threshold=0.8 | current_stress=True | predicted_stress=False
+[2026-01-05 20:55:06] Scaling default/nginx: 1 -> 2 (triggered by memory_allocation_efficiency)
+[2026-01-05 20:55:06] default/nginx: Remediation triggered | feature=node_cpu_usage | now=0.00 | pred_max=6.88 | threshold=4 | current_stress=False | predicted_stress=True
+[2026-01-05 20:55:07] Scaling default/nginx: 2 -> 3 (triggered by node_cpu_usage)
+[2026-01-05 20:55:07] Not enough data to retrain model.
+[2026-01-05 20:55:18] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:55:18] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:55:28] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:55:28] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:55:38] default/nginx: Remediation triggered | feature=cpu_allocation_efficiency | now=0.90 | pred_max=0.48 | threshold=0.8 | current_stress=True | predicted_stress=False
+[2026-01-05 20:55:38] Scaling default/nginx: 3 -> 4 (triggered by cpu_allocation_efficiency)
+[2026-01-05 20:55:38] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:55:38] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:55:49] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:55:49] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:55:49] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:55:59] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:55:59] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:56:09] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:56:09] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=0.30 | threshold=0.8 | current_stress=True | predicted_stress=False
+[2026-01-05 20:56:09] Scaling default/nginx: 4 -> 5 (triggered by memory_allocation_efficiency)
+[2026-01-05 20:56:10] default/nginx: Remediation triggered | feature=node_cpu_usage | now=0.06 | pred_max=6.86 | threshold=4 | current_stress=False | predicted_stress=True
+[2026-01-05 20:56:10] Scaling default/nginx: 5 -> 6 (triggered by node_cpu_usage)
+[2026-01-05 20:56:20] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:56:20] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:56:30] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:56:30] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:56:41] default/nginx: Remediation triggered | feature=cpu_allocation_efficiency | now=1.00 | pred_max=0.47 | threshold=0.8 | current_stress=True | predicted_stress=False
+[2026-01-05 20:56:41] Scaling default/nginx: 6 -> 7 (triggered by cpu_allocation_efficiency)
+[2026-01-05 20:56:41] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-05 20:56:41] default/nginx | node_cpu_usage in cooldown, remediation skipped
+[2026-01-05 20:56:41] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.18 | pred_max=1.68 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-05 20:56:41] Scaling default/nginx: 7 -> 8 (triggered by node_memory_usage)
+[2026-01-05 20:56:50] Monitor interrupted by user. Exiting.
+[2026-01-07 11:05:01] Starting Prometheus monitor for default/nginx
+[2026-01-07 11:08:13] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=5.26 | threshold=0.8 | current_stress=True | predicted_stress=True
+[2026-01-07 11:08:13] Scaling default/nginx: 1 -> 2 (triggered by memory_allocation_efficiency)
+[2026-01-07 11:08:13] Not enough data to retrain model.
+[2026-01-07 11:08:24] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:08:34] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:08:44] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:08:54] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:09:04] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:09:14] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=5.32 | threshold=0.8 | current_stress=True | predicted_stress=True
+[2026-01-07 11:09:14] Scaling default/nginx: 2 -> 3 (triggered by memory_allocation_efficiency)
+[2026-01-07 11:09:25] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:09:35] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:09:45] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:09:55] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:10:05] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:10:15] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=5.47 | threshold=0.8 | current_stress=True | predicted_stress=True
+[2026-01-07 11:10:15] Scaling default/nginx: 3 -> 4 (triggered by memory_allocation_efficiency)
+[2026-01-07 11:10:17] Retraining complete: new model and scaler saved.
+[2026-01-07 11:10:28] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:10:38] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:10:48] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:10:58] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:11:08] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:11:18] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=10.58 | threshold=0.8 | current_stress=True | predicted_stress=True
+[2026-01-07 11:11:18] Scaling default/nginx: 4 -> 5 (triggered by memory_allocation_efficiency)
+[2026-01-07 11:11:29] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:11:39] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:11:49] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:11:59] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:12:09] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:12:19] default/nginx: Remediation triggered | feature=memory_allocation_efficiency | now=10.00 | pred_max=10.67 | threshold=0.8 | current_stress=True | predicted_stress=True
+[2026-01-07 11:12:19] Scaling default/nginx: 5 -> 6 (triggered by memory_allocation_efficiency)
+[2026-01-07 11:12:21] Retraining complete: new model and scaler saved.
+[2026-01-07 11:12:31] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:12:42] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:12:42] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.08 | pred_max=0.67 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-07 11:12:42] Scaling default/nginx: 6 -> 7 (triggered by node_memory_usage)
+[2026-01-07 11:12:52] default/nginx | memory_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:12:52] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-07 11:12:52] Monitor interrupted by user. Exiting.
+[2026-01-07 11:24:17] Starting Prometheus monitor for default/nginx
+[2026-01-07 11:27:30] Not enough data to retrain model.
+[2026-01-07 11:28:32] Retraining complete: new model and scaler saved.
+[2026-01-07 11:29:24] default/nginx: Remediation triggered | feature=cpu_allocation_efficiency | now=10.00 | pred_max=0.02 | threshold=0.8 | current_stress=True | predicted_stress=False
+[2026-01-07 11:29:24] Scaling default/nginx: 1 -> 2 (triggered by cpu_allocation_efficiency)
+[2026-01-07 11:29:24] default/nginx: Remediation triggered | feature=node_memory_usage | now=2.11 | pred_max=0.36 | threshold=2 | current_stress=True | predicted_stress=False
+[2026-01-07 11:29:24] Scaling default/nginx: 2 -> 3 (triggered by node_memory_usage)
+[2026-01-07 11:29:34] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:29:34] default/nginx | node_memory_usage in cooldown, remediation skipped
+[2026-01-07 11:29:35] Retraining complete: new model and scaler saved.
+[2026-01-07 11:29:46] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:29:56] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:30:06] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:30:16] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:30:26] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:30:38] Retraining complete: new model and scaler saved.
+[2026-01-07 11:30:49] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:30:59] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:31:09] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:31:19] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:31:29] default/nginx: Remediation triggered | feature=cpu_allocation_efficiency | now=0.02 | pred_max=1.55 | threshold=0.8 | current_stress=False | predicted_stress=True
+[2026-01-07 11:31:29] Scaling default/nginx: 3 -> 4 (triggered by cpu_allocation_efficiency)
+[2026-01-07 11:31:40] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:31:41] Retraining complete: new model and scaler saved.
+[2026-01-07 11:31:52] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:32:02] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:32:12] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:32:22] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:32:32] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:32:42] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:32:44] Retraining complete: new model and scaler saved.
+[2026-01-07 11:32:54] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:33:05] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:33:15] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:33:25] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:33:35] default/nginx: Remediation triggered | feature=cpu_allocation_efficiency | now=0.03 | pred_max=1.70 | threshold=0.8 | current_stress=False | predicted_stress=True
+[2026-01-07 11:33:35] Scaling default/nginx: 4 -> 5 (triggered by cpu_allocation_efficiency)
+[2026-01-07 11:33:45] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:33:46] Retraining complete: new model and scaler saved.
+[2026-01-07 11:33:57] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:34:07] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:34:17] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:34:27] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:34:49] Retraining complete: new model and scaler saved.
+[2026-01-07 11:35:00] default/nginx | cpu_allocation_efficiency in cooldown, remediation skipped
+[2026-01-07 11:35:04] Monitor interrupted by user. Exiting.
